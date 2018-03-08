@@ -38,4 +38,11 @@ class IndexController extends Controller
     {
         throw new BizException(ErrorCode::$ENUM_SYSTEM_ERROR);
     }
+
+    public function healthAction()
+    {
+        return $this->response->setJsonContent([
+            'status' => 'UP'
+        ]);
+    }
 }
